@@ -1,0 +1,17 @@
+{
+  "name": "monday-genia-bridge",
+  "version": "1.0.0",
+  "description": "Ponte pública Monday → Genia/n8n (challenge + forward) para teste no Render free",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "private": true
+}

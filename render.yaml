@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: monday-genia-bridge
+    runtime: node
+    plan: free
+    region: oregon
+    branch: main
+    autoDeploy: true
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      # URL interna/APIM que a ponte deve chamar depois do Monday
+      # Ex.: https://api-dev.brmalls.com.br/allos-api-n8n-webhook/webhook/agent-factory?subscription-key=...
+      - key: FORWARD_URL
+        sync: false
+      - key: FORWARD_TIMEOUT_MS
+        value: "15000"
