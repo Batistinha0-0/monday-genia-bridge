@@ -4,6 +4,7 @@
   "description": "Ponte pública Monday → Genia/n8n (challenge + forward) para teste no Render free",
   "main": "src/server.js",
   "scripts": {
+    "build": "echo \"no build step\"",
     "start": "node src/server.js",
     "dev": "node --watch src/server.js"
   },
